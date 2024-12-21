@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WalletFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#253152"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Wallet"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:background="#2BA6F1"
+        android:id="@+id/fragment_wallet_ll_1"
+        android:orientation="horizontal" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="100sp"
+        android:layout_marginTop="70sp"
+        android:id="@+id/cardview_balance"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balance"
+            android:background="@color/white"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_addbalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview_balance"
+        android:layout_marginTop="50sp"
+        android:backgroundTint="@color/white"
+        android:elevation="100sp"
+        app:cardCornerRadius="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Add Balance"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@drawable/phonpe_img" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@drawable/google_pay_image_2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="100sp"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20sp"
+        android:layout_below="@+id/cardview_addbalance"
+        app:cardCornerRadius="20sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction History"
+            android:textStyle="bold"
+            android:background="@color/white"
+            android:layout_margin="10sp"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

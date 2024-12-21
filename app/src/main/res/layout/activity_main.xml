@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#253152"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#253152"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Quiz"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_activity_upper_relativelayout_backgr"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_margin="5sp"
+                    android:text="QUESTION ?"
+                    android:id="@+id/question_textveiw" />
+
+                <!-- RadioGroup for RadioButtons -->
+                <RadioGroup
+                    android:id="@+id/options_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/main_activity_radio_button_backgr"
+                        android:text="Option 1" />
+
+                    <RadioButton
+                        android:id="@+id/option2"
+                        android:layout_width="match_parent"
+                        android:layout_margin="5sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/main_activity_radio_button_backgr"
+                        android:layout_height="wrap_content"
+                        android:text="Option 2" />
+
+                    <RadioButton
+                        android:id="@+id/option3"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:background="@drawable/main_activity_radio_button_backgr"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5sp"
+                        android:text="Option 3" />
+
+                    <RadioButton
+                        android:id="@+id/option4"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/main_activity_radio_button_backgr"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5sp"
+                        android:text="Option 4" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#253152"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:text="Skipped"
+                android:id="@+id/skipped_textview"
+                android:textSize="17sp"
+                android:layout_margin="30sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/main_activity_circle_textviews_backgr" />
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="30sp"
+                android:gravity="center"
+                android:text=""
+                android:id="@+id/timer_textview"
+                android:textSize="40sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/main_activity_circle_textviews_backgr" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10sp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:text="Skip"
+                android:id="@+id/skip_question_button"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:backgroundTint="@null"
+                android:background="@drawable/main_activity_skip_button_backgr" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:id="@+id/next_question_button"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/main_activity_next_button_backgr"
+                android:text="Next"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
